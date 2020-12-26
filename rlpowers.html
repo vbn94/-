@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>RL верига</title>
+<meta charset="utf8">
+<link rel="stylesheet" href="styles/formstyle.css">
+<script src="scripts/rlscript.js"></script>
+<script src="scripts/common.js"></script>
+</head>
+<body>
+<div class="container">
+  <div class="row" align="center">
+	<h2> Изчисляване на мощностите за индуктивен товар </h2>
+	<img src="images/rl.png" width="70%">
+  </div>
+  <!-- Напрежение -->
+  <div class="row">
+    <div class="col-25">
+      <label for="voltage">Напрежение (U): </label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="voltage" name="voltage" placeholder="Ефективна стойност на напрежението...">
+	  <select id="metricV">
+		<option value="v">V</option>
+		<option value="kv">kV</option>
+	  </select>
+    </div>
+  </div>
+  
+  <!-- Честота -->
+   <div class="row">
+    <div class="col-25">
+      <label for="voltageA">Честота (f): </label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="voltageF" name="voltageF" placeholder="Честота на напрежението...">
+	  <select id="metricF">
+		<option value="hz">Hz</option>
+		<option value="khz">kHz</option>
+		<option value="mhz">MHz</option>
+		<option value="rads">rad/s</option>
+	  </select>
+    </div>
+  </div>
+  
+  <!-- Съпротивление -->
+   <div class="row">
+    <div class="col-25">
+      <label for="res">Съпротивление (R): </label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="res" name="res" placeholder="Електрическо съпротивление...">
+	  <select id="metricR">
+		<option value="ohm">&#8486</option>
+		<option value="kohm">k&#8486</option>
+		<option value="mohm">M&#8486</option>
+		<option value="gohm">G&#8486</option>
+	  </select>
+    </div>
+  </div>
+  
+  <!-- Капацитет -->
+  <div class="row">
+    <div class="col-25">
+      <label for="res">Индуктивност (L): </label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="ind" name="ind" placeholder="Индуктивност на бобината...">
+	  <select id="metricL">
+		<option value="h">H</option>
+		<option value="mh">mH</option>
+	  </select>
+    </div>
+  </div>
+  
+  <!-- Бутон -->
+  <div class="row" align="center">
+    <input onclick="calcRL();" id="calcbtn" type="button" value="Пресметни">
+	<input onclick="location.reload();" id="resetbtn" type="button" value="Изчисти">
+  </div>
+  
+  <!-- P -->
+  <div class="row">
+    <div class="col-25">
+      <label for="apow">Активна мощност (P): </label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="apow" name="apow" disabled style="width: 90%;">
+    </div>
+  </div>
+  
+   <!-- Q -->
+  <div class="row">
+    <div class="col-25">
+      <label for="rpow">Реактивна мощност (Q): </label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="rpow" name="rpow" disabled style="width: 90%;">
+    </div>
+  </div>
+  
+   <!-- S -->
+  <div class="row">
+    <div class="col-25">
+      <label for="spow">Пълна мощност (S): </label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="spow" name="spow" disabled style="width: 90%;">
+    </div>
+  </div>
+  
+    <!-- cosFi -->
+  <div class="row">
+    <div class="col-25">
+      <label for="cos">Фактор на мощността cos&#x03D5: </label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="cos" name="cos" disabled style="width: 90%;">
+    </div>
+  </div>
+  
+  <!-- Fi rad -->
+  <div class="row">
+    <div class="col-25">
+      <label for="fi">Ъгъл на дефазиране &#x03D5: </label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="fi" name="fi" disabled style="width: 90%;">
+    </div>
+  </div>
+  
+   <!-- Fi deg -->
+  <div class="row">
+    <div class="col-25">
+      <label for="fid">Ъгъл на дефазиране градуси &#x03D5: </label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="fid" name="fid" disabled style="width: 90%;">
+    </div>
+  </div>
+</div>
+</body>
+</html>
