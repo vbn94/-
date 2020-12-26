@@ -92,18 +92,3 @@ function calcRC() {
    
    document.getElementById("fid").value = rad2deg(phi).toFixed(5) + " deg";
 }
-
-function writeVal(id, num, me){
-	if (num < 1000){
-	document.getElementById(id).value = num.toFixed(3) + " " + me;
-   } else if ( num < 1000000){
-	num /= 1000;
-	document.getElementById(id).value = num.toFixed(3) + " k" + me;
-   } else if( num < 1000000000) {
-    num /= 1000000;
-	document.getElementById(id).value = num.toFixed(3) + " M" + me;
-   } else {
-    num /= 1000000000;
-	document.getElementById(id).value = num.toFixed(3) + " G" + me;
-   }
-}
