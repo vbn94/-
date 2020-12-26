@@ -1,7 +1,7 @@
 function powerRC(U, f, R, C){
 	var Xc = 0;
 	if (C != 0 || f != 0){
-		Xc1 / (2 * Math.PI * f * C);
+		Xc = 1 / (2 * Math.PI * f * C);
 	}
 	var P = (U * U) / (Math.sqrt(R * R + Xc * Xc));
 	return P;
